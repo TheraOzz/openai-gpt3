@@ -1,7 +1,7 @@
 import os
 import openai
-import config
-openai.api_key = config.OPENAI_API_KEY
+import config_api_keys
+openai.api_key = config_api_keys.OPENAI_API_KEY
 
 #this is a Q&A machine learning algorithm using OPEN AI 
 def gpt3_question_and_answer(query):
@@ -52,5 +52,5 @@ def gpt3_chat_with_ai(query):
 # query = 'What is the name of elon musks mother'
 # print(gpt3_question_and_answer(query))
 
-# query = 'what is your name?'
-# print(gpt3_chat_with_ai(query))
+query = 'what is your name?'
+print(gpt3_chat_with_ai(query))
