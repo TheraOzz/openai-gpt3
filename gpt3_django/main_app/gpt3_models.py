@@ -52,5 +52,5 @@ def gpt3_chat_with_ai(query):
 # query = 'What is the name of elon musks mother'
 # print(gpt3_question_and_answer(query))
 
-query = 'what is your name?'
+query = 'why am I sad?'
 print(gpt3_chat_with_ai(query))
