@@ -5,3 +5,5 @@ from . import gpt3_models
 
 # gpt3_models.gpt3_question_and_answer()
 
+def base(request):
+    return render(request, '/base.html')
