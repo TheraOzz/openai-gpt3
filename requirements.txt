@@ -1,1 +1,2 @@
 pip install openai
+pip install gTTS
