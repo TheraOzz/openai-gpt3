@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Angelica Project {% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <canvas class="webgl"></canvas>
+</div>
+
+
+
+
+<script type="module" src="{% static 'rendering_angelica/index.js'%}"> </script>
+{% endblock content %}
