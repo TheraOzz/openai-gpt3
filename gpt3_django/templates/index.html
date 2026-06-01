@@ -1,16 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Angelica Project {% endblock %}
-
+{% block title %}Angelica Project{% endblock %}
 
 {% block content %}
-<div class="row">
-    <canvas class="webgl"></canvas>
+<div class="row gy-4">
+    <div class="col-lg-5">
+        <div class="card p-4 shadow-sm">
+            <h2 class="h4 mb-3">Ask Angelica</h2>
+            <p class="text-muted">Enter a question for the OpenAI assistant and get a conversational answer.</p>
+
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+            {% if answer %}
+                <div class="mt-4">
+                    <h3 class="h5">Answer</h3>
+                    <div class="card p-3 bg-dark text-white">
+                        <pre class="mb-0">{{ answer }}</pre>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="col-lg-7">
+        <div class="card p-3 shadow-sm">
+            <h2 class="h4 mb-3">Angelica 3D Experience</h2>
+            <canvas class="webgl" id="angelica-canvas" style="min-height: 450px;"></canvas>
+        </div>
+    </div>
 </div>
 
-
-
-
-<script type="module" src="{% static 'rendering_angelica/index.js'%}"> </script>
+<script type="module" src="{% static 'rendering_angelica/index.js' %}"></script>
 {% endblock content %}

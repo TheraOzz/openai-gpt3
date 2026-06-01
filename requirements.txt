@@ -1,2 +1,3 @@
-pip install openai
-pip install gTTS
+Django>=4.2,<5
+openai>=0.28.0
+python-dotenv>=1.0.0
