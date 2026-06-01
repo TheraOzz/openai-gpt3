@@ -1,6 +1,6 @@
-# AngelicaAI GPT-3 Django Project
+# SceneMind — Multi-model Assistant
 
-This is a refactored Django project that combines a simple GPT-powered assistant with a 3D Angelica scene renderer.
+SceneMind is a refactored Django project that combines a flexible, multi-model assistant with a 3D scene renderer (previously the Angelica project).
 
 ## What it does
 
